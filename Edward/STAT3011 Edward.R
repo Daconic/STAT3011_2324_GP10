@@ -1,4 +1,4 @@
-training_data <- read.csv('./data/cs-training.csv')[-1]
+training_data <- read.csv('C:/Users/yeung/Downloads/cs-training.csv')[-1]
 library(ggplot2)
 library(randomForest)
 # For each column heading we replace "-" and convert the heading in lowercase 
@@ -11,7 +11,7 @@ boxplot(training_data$age, horizontal = TRUE, main = "Age Boxplot", xlab = "Age"
 outliers_age <- boxplot.stats(training_data$age)$out
 points(outliers_age, rep(1, length(outliers_age)), col = "red", pch = 16)
 
-boxplot(training_data$revolvingutilizationofunsecuredlines, horizontal = TRUE, main = "Revolving Utilization Boxplot", xlab = "Revolving Utilization")
+boxplot(training_data$revolvingutilizationofunsecuredlines, horizontal = TRUE, main = "Utilization Boxplot", xlab = "Revolving Utilization")
 outliers_rev <- boxplot.stats(training_data$revolvingutilizationofunsecuredlines)$out
 points(outliers_rev, rep(1, length(outliers_rev)), col = "red", pch = 16)
 
